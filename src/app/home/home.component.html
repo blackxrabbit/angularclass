@@ -17,12 +17,21 @@
   </section>
   <h2>YOU CAN HAVE ANY OF THEM</h2>
   <section class="images">
-    
-      <img src="https://www.guidedogs.org/wp-content/uploads/2018/01/Mobile.jpg" width="320px" alt="">
-      <img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" width="320px" alt="">
-      <img src="http://inn.spb.ru/images/300/DSC100355085.jpg" width="320px" alt="">
-      <img src="https://t1.rbxcdn.com/9cbffe47024294813f5ee57bbe2f881b" width="320px" alt="">
-    
+
+    <img src="https://www.guidedogs.org/wp-content/uploads/2018/01/Mobile.jpg" width="320px" alt="">
+    <img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" width="320px" alt="">
+    <img src="http://inn.spb.ru/images/300/DSC100355085.jpg" width="320px" alt="">
+    <img src="https://t1.rbxcdn.com/9cbffe47024294813f5ee57bbe2f881b" width="320px" alt="">
+
+  </section>
+  <section>
+    <p *ngIf="exp">I will be shown if this is true</p>
+  </section>
+  <section>
+    <img src="http://via.placeholder.com/640x360" *ngIf="!show" width="400px" alt="">
+    <img *ngIf="show"
+      src="https://res.cloudinary.com/petrescue/image/upload/a_0,ar_1:1,c_fill,dpr_auto,f_auto,fl_lossy,g_face,q_auto,w_auto:100:500,x_0,y_0,z_0.3871473354231975/v1557492210/taexum5hv9glvuex4nev.jpg"
+      alt="">
   </section>
 
 </div>

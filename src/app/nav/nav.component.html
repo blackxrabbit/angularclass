@@ -1,8 +1,10 @@
 <nav>
   <h2>ADOPT US</h2>
   <span class="spacer"></span>
-  <ul class="nav-btn">
-    <li>HOME</li>
-    <li>ABOUT US</li>
+  <ul class="nav-btn" *ngFor="let btn of navBtns">
+    <li  *ngIf="btn.accessLevel == 'admin'"><a href="{{btn.link}}">{{btn.name}}</a></li>
   </ul>
+  <select name="" id="" >
+    <option [value]="item" *ngFor="let item of options;let i = index; trackBy: trackFun">{{i+1}} - {{item}}</option>
+  </select>
 </nav>

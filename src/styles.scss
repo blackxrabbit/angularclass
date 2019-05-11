@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
 
 body, html {
     margin: 0;
@@ -10,6 +10,10 @@ body {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     color: rgba(0,0,0,.8)
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Baloo Bhai', cursive;
 }
 
 *{
