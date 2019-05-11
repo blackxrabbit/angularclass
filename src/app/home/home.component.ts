@@ -9,6 +9,8 @@ export class HomeComponent implements OnInit {
 
   exp = true;
   show = false;
+
+  emotion = 'angry'
   constructor() { }
 
   ngOnInit() {

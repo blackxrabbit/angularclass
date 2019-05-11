@@ -34,4 +34,11 @@
       alt="">
   </section>
 
+  <section [ngSwitch]="emotion">
+    <p *ngSwitchCase="'hug'">Our puppy is 🤗</p>
+    <p *ngSwitchCase="'angry'">Our puppy is 😠</p>
+    <p *ngSwitchCase="'shock'">Our puppy is 😲</p>
+    <p *ngSwitchDefault>Our puppy 😜</p>
+  </section>
+
 </div>

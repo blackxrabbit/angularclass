@@ -15,6 +15,8 @@ export class NavComponent implements OnInit {
     { name: 'DONATE', link: '/donate', accessLevel: 'user' }]
   item;
 
+  public emotion = "hug"
+
   options = ['Red', 'Blue', 'Green', 'Orange']
   constructor() { }
 
