@@ -2,11 +2,17 @@
 
 <form action="" (ngSubmit)="submitForm(myform)"  [formGroup]="myform">
 
-  <input class="form-field"
+  <!-- <input class="form-field"
    [ngClass]="{'invalid-field': formName.invalid && formName.touched}" 
    formControlName="name" type="text"
     placeholder="Name" name="">
-  <p *ngIf="formName.invalid && formName.touched">Name is required</p>
+  <p *ngIf="formName.invalid && formName.touched">Name is required</p> -->
+  <input class="form-field" formControlName="firstName" 
+  type="text" placeholder="First Name">
+  <input class="form-field" formControlName="lastName" 
+  type="text" placeholder="last Name">
+  <input class="form-field" formControlName="fullName" 
+  type="text" placeholder="Full Name">
   <input class="form-field" formControlName="address" 
   type="text" placeholder="Address">
   <input class="form-field" formControlName="age" 
@@ -20,10 +26,14 @@
     <option value="Female">Female</option>
   </select>
 
-  <button class="button" type="submit" [ngClass]="{'disabled': myform.invalid || disableBtn}"
+  <button class="button" type="submit" 
+  [ngClass]="{'disabled': myform.invalid || disableBtn}"
    [disabled]="myform.invalid || disableBtn">Submit</button>
    
+   <button class="button" 
+   (click)="populateForm()" type="button">Populate Form</button>
 </form>
+
 
 
 <!-- 
