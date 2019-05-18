@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
     {name: 'Blue', image: 'http://inn.spb.ru/images/300/DSC100355085.jpg'},
     {name: 'tiny', image: 'https://t1.rbxcdn.com/9cbffe47024294813f5ee57bbe2f881b'}
   ]
+
+  itoy;
   
   
   constructor(
@@ -50,6 +52,14 @@ export class HomeComponent implements OnInit {
       }
     })
     
+  }
+
+  changeItoy(pups){
+    this.itoy = pups
+  }
+
+  trackFun(i, item){
+    return item.name
   }
 
 }

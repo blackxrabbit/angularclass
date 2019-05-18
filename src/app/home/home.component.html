@@ -16,15 +16,14 @@
       tempor sollicitudin.</p>
   </section>
   <h2>YOU CAN HAVE ANY OF THEM</h2>
-  <section class="images">
-
-    <img src="https://www.guidedogs.org/wp-content/uploads/2018/01/Mobile.jpg" width="320px" alt="">
-    <img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" width="320px" alt="">
-    <img src="http://inn.spb.ru/images/300/DSC100355085.jpg" width="320px" alt="">
-    <img src="https://t1.rbxcdn.com/9cbffe47024294813f5ee57bbe2f881b" width="320px" alt="">
-
+  <select placeholder="Select Puppy" (change)="changeItoy($event)" name="Puppy"  >
+    <option *ngFor="let puppy of puppies; let i = index " [value]="puppy" (click)="changeItoy(puppy)" >{{puppy.name}}</option>
+  </select>
+  <section class="images" *ngIf="itoy" >
+    <h3>My name is {{itoy.name}}</h3>
+    <img [src]="itoy.image" width="320px" alt="">
   </section>
-  <section>
+  <!-- <section>
     <p *ngIf="exp">I will be shown if this is true</p>
   </section>
   <section>
@@ -48,6 +47,6 @@
   <ng-container>
     <p>I will be shown by default</p>
   </ng-container>
-
+ -->
 
 </div>
