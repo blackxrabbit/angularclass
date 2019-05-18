@@ -1,12 +1,33 @@
 <h2>Input Forms</h2>
-<div>
 
-  <input class="form-field" type="text" placeholder="Name" name="">
-  <input class="form-field" type="text" placeholder="Address">
-  <input class="form-field" type="number" placeholder="Age">
-  <select class="form-field" name="" id="" placeholder="Gender">
+<form action="" (ngSubmit)="submitForm(myform)"  [formGroup]="myform">
+
+  <input class="form-field"
+   [ngClass]="{'invalid-field': formName.invalid && formName.touched}" 
+   formControlName="name" type="text"
+    placeholder="Name" name="">
+  <p *ngIf="formName.invalid && formName.touched">Name is required</p>
+  <input class="form-field" formControlName="address" 
+  type="text" placeholder="Address">
+  <input class="form-field" formControlName="age" 
+  type="number" placeholder="Age">
+  <p *ngIf="formAge.touched && formAge.errors?.required">Age is required</p>
+  <p *ngIf="formAge.touched && formAge.errors?.min">Age must be greater than or equal to 18</p>
+  <select class="form-field" 
+  formControlName="gender" 
+  placeholder="Gender">
     <option value="Male">Male</option>
     <option value="Female">Female</option>
   </select>
-  <button>Submit</button>
-</div>
+
+  <button class="button" type="submit" [ngClass]="{'disabled': myform.invalid || disableBtn}"
+   [disabled]="myform.invalid || disableBtn">Submit</button>
+   
+</form>
+
+
+<!-- 
+<p>Name: {{name.value}}</p>
+<p>Address: {{address.value}}</p>
+<p>Age: {{age.value}}</p>
+<p>Gender: {{gender.value}}</p> -->
