@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { isNgTemplate } from '@angular/compiler';
+import { MathService } from '../math.service';
+import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
+  providers: [MathService]
 })
 export class NavComponent implements OnInit {
 
@@ -18,7 +21,7 @@ export class NavComponent implements OnInit {
   public emotion = "hug"
 
   options = ['Red', 'Blue', 'Green', 'Orange']
-  constructor() { }
+  constructor(private math: MathService, private logger: LoggerService ) { }
 
   ngOnInit() {
     

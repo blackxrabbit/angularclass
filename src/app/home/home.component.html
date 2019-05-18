@@ -41,4 +41,13 @@
     <p *ngSwitchDefault>Our puppy 😜</p>
   </section>
 
+  <ng-template [ngIf]="true">
+    <p>I will not be shown</p>
+  </ng-template>
+
+  <ng-container>
+    <p>I will be shown by default</p>
+  </ng-container>
+
+
 </div>

@@ -25,3 +25,12 @@ li {
     margin-left: 16px;
     color: white;
 }
+
+a, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+}
+
+a:focus {
+    font-weight: 700;
+}

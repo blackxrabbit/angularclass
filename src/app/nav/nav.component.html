@@ -5,6 +5,12 @@
     <li  *ngIf="btn.accessLevel == 'admin'"><a href="{{btn.link}}">{{btn.name}}</a></li>
   </ul>
   <select name="" id="" >
-    <option [value]="item" *ngFor="let item of options;let i = index; trackBy: trackFun">{{i+1}} - {{item}}</option>
+    <ng-container *ngFor="let item of options;let i = index;let odd = odd; trackBy: trackFun">
+      <ng-container>
+        <ng-container>
+          <option [value]="item" *ngIf="odd">{{i}} - {{item}}</option>
+        </ng-container>
+      </ng-container>
+    </ng-container>
   </select>
 </nav>
